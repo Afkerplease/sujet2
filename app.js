@@ -2,6 +2,7 @@ const express = require("express");
 const Meuble = require("./models/meubleModel");
 
 const app = express();
+app.use(express.json());
 
 app.use(express.json());
 app.get("/api/meubles", async (req, res) => {
