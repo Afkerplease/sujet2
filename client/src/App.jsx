@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+import Form from "./../components/Form";
 
 function App() {
-  const [data, setData] = useState("");
+  const [data, setData] = useState([]);
   useEffect(() => {
     fetch("/api/meubles")
       .then((res) => res.json())
@@ -9,14 +10,17 @@ function App() {
   }, []);
   console.log(data);
   return (
-    <div>
-      {data.map((meuble) => (
-        <div>
-          <h1> {meuble.name} </h1>
-          <h2> {meuble.category} </h2>
-        </div>
-      ))}
-    </div>
+    <>
+      <div>
+        {data.map((meuble) => (
+          <div key={meuble._id}>
+            <h1> {meuble.name} </h1>
+            <h2> {meuble.category} </h2>
+          </div>
+        ))}
+      </div>
+      <Form />
+    </>
   );
 }
 
