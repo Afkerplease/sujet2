@@ -6,14 +6,18 @@ function App() {
   useEffect(() => {
     fetch("/api/meubles")
       .then((res) => res.json())
-      .then((data) => setData(data.data.meubles));
-  }, []);
+      .then((data) => {
+        console.log(data);
+        setData(data.data.meubles);
+      });
+  }, [data]);
   console.log(data);
   return (
     <>
       <div>
         {data.map((meuble) => (
-          <div key={index} className="data-item">
+          <div key={meuble._id} className="data-item">
+            {console.log(meuble)}
             <h3>{meuble.name}</h3>
             <p>Category: {meuble.category}</p>
             <p>Description: {meuble.description}</p>

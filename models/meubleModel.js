@@ -13,7 +13,7 @@ const meubleSchema = new mongoose.Schema({
   description: {
     type: String,
   },
-  matériaux: {
+  materiaux: {
     type: String,
   },
   fournisseur: {
