@@ -13,9 +13,12 @@ function App() {
     <>
       <div>
         {data.map((meuble) => (
-          <div key={meuble._id}>
-            <h1> {meuble.name} </h1>
-            <h2> {meuble.category} </h2>
+          <div key={index} className="data-item">
+            <h3>{meuble.name}</h3>
+            <p>Category: {meuble.category}</p>
+            <p>Description: {meuble.description}</p>
+            <p>Matériaux: {meuble.materiaux}</p>
+            <p>Fournisseur: {meuble.fournisseur}</p>
           </div>
         ))}
       </div>
