@@ -1,0 +1,20 @@
+.data-list {
+  margin-top: 20px;
+}
+
+.data-item {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+.data-item h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.data-item p {
+  margin: 5px 0;
+}

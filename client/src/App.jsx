@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Form from "./../components/Form";
+import "./App.css";
 
 function App() {
   const [data, setData] = useState([]);
